@@ -12,6 +12,6 @@ func StudentToRowCN(stu Student) []string {
 		stu.Name,
 		strconv.Itoa(stu.Age),
 		stu.City,
-		strconv.FormatFloat(stu.Score, 'f', 0, 64),
+		strconv.FormatFloat(stu.Score, 'f', 1, 64),
 	}
 }
