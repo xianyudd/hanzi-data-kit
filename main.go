@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go-data-learning/model"
 	"go-data-learning/parser"
 	"path/filepath"
 )
@@ -11,25 +12,18 @@ func main() {
 	outPath := filepath.Join("data", filename)
 
 	fmt.Println(">>> 开始写入csv文件:", outPath)
-	headers := []string{"姓名", "年龄", "城市", "得分"}
+	headers := model.StudentHeadersCN() // 获取中文表头，未来我们也可以添加 StudentHeadersEN() 来支持英文表头
 
-	// 我们先写死 3 行（让结果可控，便于验收）
-	totalRows := 3
-
-	// rowGenerator：根据行号返回每一行的 []string
-	rowGenerator := func(i int) []string {
-		switch i {
-		case 1:
-			return []string{"张三", "22", "北京", "95"}
-		case 2:
-			return []string{"李四", "25", "上海", "88"}
-		case 3:
-			return []string{"王五", "28", "广州", "92"}
-		default:
-			// 防御式：不应该发生
-			return []string{"", "", "", ""}
-		}
+	students := []model.Student{
+		{Name: "张三", Age: 22, City: "北京", Score: 95},
+		{Name: "李四", Age: 25, City: "上海", Score: 88},
+		{Name: "王五", Age: 28, City: "广州", Score: 92},
 	}
+	totalRows := len(students)
+	rowGenerator := func (i int) []string {
+		return model.StudentToRowCN(students[i-1])
+	}
+
 
 	//调用CSV 写入器
 	if err := parser.WriteLargeCSV(outPath, headers, totalRows, rowGenerator); err != nil {
