@@ -30,7 +30,7 @@ func ParseCSVToStudents(filename string) ([]model.Student, error) {
 			continue
 		}
 
-		age, _ := strconv.Atoi(row[i])
+		age, _ := strconv.Atoi(row[1])
 		score, _ := strconv.ParseFloat(row[3], 64)
 		stu := model.Student{
 			Name:  row[0],

@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/csv"
 	"fmt"
+	"go-data-learning/parser"
 	"log"
 	"os"
 )
@@ -14,7 +15,17 @@ func main() {
 	writeCsv(filename)
 
 	fmt.Println("<<< 开始读取csv文件:", filename)
-	readCsv(filename)
+	students, err := parser.ParseCSVToStudents(filename)
+	if err != nil {
+		log.Fatalf("解析CSV失败: %v", err)
+	}
+	fmt.Printf("成功解析了 %d 条学生数据:\n", len(students))
+	for _, stu := range students {
+		fmt.Printf("- %s (年龄: %d, 分数: %.2f )\n", stu.Name, stu.Age, stu.Score)
+	}
+	// 未来添加新功能时，只需要在这里继续调用：
+	// parser.ParseExcelToStruct("students.xlsx")
+	// db.SaveStudents(students)
 }
 
 func writeCsv(filename string) {

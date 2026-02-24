@@ -1,0 +1,28 @@
+# 1. Go 编译出来的可执行程序 (比如 go build 产生的文件)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+
+# 2. Go 测试工具产生的中间文件
+*.test
+*.out
+coverage.out
+
+# 3. 编辑器和 IDE 的本地配置文件 (非常重要！别把你的本地配置推给同事)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 4. 操作系统产生的垃圾文件
+.DS_Store
+Thumbs.db
+
+# 5. ★ 本项目的专属规则：忽略所有数据文件 ★
+*.csv
+*.xlsx
+# 如果你以后想忽略整个 data 文件夹里的所有内容，可以取消下面这行的注释
+# data/*
