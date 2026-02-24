@@ -20,10 +20,9 @@ func main() {
 		{Name: "王五", Age: 28, City: "广州", Score: 92},
 	}
 	totalRows := len(students)
-	rowGenerator := func (i int) []string {
+	rowGenerator := func(i int) []string {
 		return model.StudentToRowCN(students[i-1])
 	}
-
 
 	//调用CSV 写入器
 	if err := parser.WriteLargeCSV(outPath, headers, totalRows, rowGenerator); err != nil {
