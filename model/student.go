@@ -1,9 +1,10 @@
 package model
 
-//注意：结构体的名字和字段的名字首字母必须大写，否则在其他包中无法访问
+// Student 代表系统中的一个标准学生信息对象。
+// 它用于在 CSV/Excel 解析器与业务逻辑层之间传递数据。
 type Student struct {
-	Name string
-	Age int
-	City string
-	Score float64
+	Name  string  // Name 学生的真实姓名
+	Age   int     // Age 学生的年龄
+	City  string  // City 所在城市
+	Score float64 // Score 考试得分
 }

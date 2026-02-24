@@ -1,3 +1,5 @@
+// Package parser 提供了项目中所有文件格式（如 CSV, Excel）的解析与导出工具。
+// 它可以将各种非结构化文件映射为 model 层的强类型结构体。
 package parser
 
 import (
@@ -8,6 +10,14 @@ import (
 	"strconv"
 )
 
+// ParseCSVToStruct 读取指定路径的 CSV 文件并将其映射为结构体切片。
+//
+// 示例用法:
+//
+//	students, err := parser.ParseCSVToStruct("data.csv")
+//	if err != nil { ... }
+//
+// 注意：该函数会自动忽略长度不足 4 列的脏数据行。
 func ParseCSVToStudents(filename string) ([]model.Student, error) {
 	file, err := os.Open(filename)
 	if err != nil {
