@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"go-data-learning/generator"
-	"go-data-learning/model"
-	"go-data-learning/parser"
+	"github.com/xianyudd/hanzi-data-kit/generator"
+	"github.com/xianyudd/hanzi-data-kit/model"
+	"github.com/xianyudd/hanzi-data-kit/parser"
 	"path/filepath"
 )
 

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"go-data-learning/parser"
+	"github.com/xianyudd/hanzi-data-kit/parser"
 )
 
 func main() {

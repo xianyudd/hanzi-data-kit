@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"go-data-learning/generator"
-	"go-data-learning/model"
+	"github.com/xianyudd/hanzi-data-kit/generator"
+	"github.com/xianyudd/hanzi-data-kit/model"
 )
 
 func TestStudentGenerator_ReproducibleWithSameSeed(t *testing.T) {

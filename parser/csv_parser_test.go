@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"go-data-learning/model"
-	"go-data-learning/parser"
+	"github.com/xianyudd/hanzi-data-kit/model"
+	"github.com/xianyudd/hanzi-data-kit/parser"
 )
 
 // writeTempFile 在临时目录写入文件并返回路径。

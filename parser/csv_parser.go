@@ -3,7 +3,7 @@ package parser
 import (
 	"encoding/csv"
 	"fmt"
-	"go-data-learning/model"
+	"github.com/xianyudd/hanzi-data-kit/model"
 	"log"
 	"os"
 	"strconv"

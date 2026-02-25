@@ -1,7 +1,7 @@
 package generator
 
 import (
-	"go-data-learning/model"
+	"github.com/xianyudd/hanzi-data-kit/model"
 	"math"
 	"math/rand"
 )
