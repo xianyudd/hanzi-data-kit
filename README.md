@@ -2,6 +2,9 @@
 
 [![CI](https://github.com/xianyudd/hanzi-data-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/xianyudd/hanzi-data-kit/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://github.com/xianyudd/hanzi-data-kit/blob/main/LICENSE)
+[![Go Reference](https://pkg.go.dev/badge/github.com/xianyudd/hanzi-data-kit.svg)](https://pkg.go.dev/github.com/xianyudd/hanzi-data-kit)
+[![Go Report Card](https://goreportcard.com/badge/github.com/xianyudd/hanzi-data-kit)](https://goreportcard.com/report/github.com/xianyudd/hanzi-data-kit)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/xianyudd/hanzi-data-kit)](https://github.com/xianyudd/hanzi-data-kit/blob/main/go.mod)
 
 一个用于**生成中文学生样例数据**并进行 **CSV 写入/解析** 的 Go 项目，适合做数据处理练习、导入导出链路验证和单元测试样本构造。
 
